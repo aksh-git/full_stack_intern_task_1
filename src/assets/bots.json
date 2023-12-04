@@ -1,0 +1,16 @@
+{
+    "bots": [
+        {
+            "id": "bot_01",
+            "title": "Caressa Jasline",
+            "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum non labore, cumque nostrum, distinctio iure dolor molestiae id expedita omnis vero molestias ipsum sunt voluptates asperiores, in accusamus vel fugiat?",
+            "avatar": "/images/avatar_bot_01.jpg"
+        },
+        {
+            "id": "bot_02",
+            "title": "Johnni Gonzalez",
+            "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum non labore, cumque nostrum, distinctio iure dolor molestiae id expedita omnis vero molestias ipsum sunt voluptates asperiores, in accusamus vel fugiat?",
+            "avatar": "/images/avatar_bot_02.jpg"
+        }
+    ]
+}
