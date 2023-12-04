@@ -21,7 +21,7 @@ type Props = {
 function MessageList({ messages }: Props) {
 
     const ref = useRef<HTMLDivElement>(null);
-
+    // Auto scrolling
     useEffect(() => {
         if (messages?.length) {
             ref.current?.scrollIntoView({
@@ -30,7 +30,6 @@ function MessageList({ messages }: Props) {
             });
         }
     }, [messages?.length]);
-
     
     return (
         <div className='w-full h-full overflow-y-auto p-6'>

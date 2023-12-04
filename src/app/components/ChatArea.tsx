@@ -23,11 +23,12 @@ type chatProps = {
     messageStore: Message[];
     deleteMessages: () => void;
     sendMessage: (message: string) => void;
+    goBack: () => void;
 }
 
-function ChatArea({ chat_id, messageStore, deleteMessages, sendMessage }: chatProps) {
+function ChatArea({ chat_id, messageStore, deleteMessages, sendMessage, goBack }: chatProps) {
 
-    const bots= botsData['bots']
+    const bots = botsData['bots']
     const bot = bots.filter((b) => b.id === chat_id)[0]
 
     const [message, setMessage] = useState('')
@@ -59,7 +60,7 @@ function ChatArea({ chat_id, messageStore, deleteMessages, sendMessage }: chatPr
                         </div>
 
                         <div className='flex items-center gap-2 md:gap-4 pr-2'>
-                            <div className='flex items-center gap-2 hover:text-accent cursor-pointer p-2 lg:p-0 hover:bg-primary lg:hover:bg-transparent rounded-md'>
+                            <div onClick={()=>goBack()} className='flex items-center gap-2 hover:text-accent cursor-pointer p-2 lg:p-0 hover:bg-primary lg:hover:bg-transparent rounded-md'>
                                 <div className='text-lg'>
                                     <IoArrowBackCircle />
                                 </div>
@@ -95,7 +96,7 @@ function ChatArea({ chat_id, messageStore, deleteMessages, sendMessage }: chatPr
                                 </div>
 
                                 <div className=''>
-                                    <button className='flex justify-center items-center bg-accent text-black text-xl p-3 rounded-full cursor-pointer disabled:bg-accent/50' title='send' type='submit' disabled={message.length<=0}>
+                                    <button className='flex justify-center items-center bg-accent text-black text-xl p-3 rounded-full cursor-pointer disabled:bg-accent/50' title='send' type='submit' disabled={message.length <= 0}>
                                         <GrSend />
                                     </button>
                                 </div>

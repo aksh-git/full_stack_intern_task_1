@@ -11,32 +11,36 @@ import botsData from '@/assets/bots.json';
 export default function Home() {
 
 
-  const [chatImageOption, setchatImages] = useState(false)
-  const [bots, setbots] = useState(botsData['bots'])
-  const [activeChat, setactiveChat] = useState<any>()
-  const [messageStore, setMessageStore] = useState<any>([])
+  const [chatImageOption, setchatImages] = useState(false);
+  const [bots, setbots] = useState(botsData['bots']);
+  const [activeChat, setactiveChat] = useState<any>();
+  const [messageStore, setMessageStore] = useState<any>([]);
 
   const toggleChatImageOption = () => {
-    setchatImages(!chatImageOption)
+    setchatImages(!chatImageOption);
   }
 
   const launchBot = (id: String) => {
-    setactiveChat(id)
+    setactiveChat(id);
+  }
+
+  const goToWelcomeScreen = () => {
+    setactiveChat(null)
   }
 
   const AddNewBot = () => {
-    //TODO
+    //TODO : Not required for the moment
   }
 
   useEffect(() => {
     if (!activeChat) return;
-    const bot = bots.filter((b) => b.id === activeChat)[0]
-    setMessageStore(bot.chatHistory)
+    const bot = bots.filter((b) => b.id === activeChat)[0];
+    setMessageStore(bot.chatHistory);
   }, [bots, activeChat, setMessageStore])
 
 
   const deleteMessages = () => {
-    setMessageStore([])
+    setMessageStore([]);
   }
 
   const sendMessage = (message: string) => {
@@ -50,7 +54,7 @@ export default function Home() {
       },
       timestamp: new Date,
     }
-    setMessageStore([...messageStore, msg])
+    setMessageStore([...messageStore, msg]);
   }
 
   return (
@@ -78,6 +82,7 @@ export default function Home() {
             messageStore={messageStore}
             deleteMessages={deleteMessages}
             sendMessage={sendMessage}
+            goBack={goToWelcomeScreen}
           />}
         </div>
       </div>

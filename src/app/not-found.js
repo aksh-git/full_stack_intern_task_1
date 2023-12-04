@@ -1,5 +1,5 @@
 import Link from 'next/link';
- 
+
 export default function NotFound() {
   return (
     <div className='mt-12 h-96 container font-sans flex flex-col justify-center items-center gap-3'>
