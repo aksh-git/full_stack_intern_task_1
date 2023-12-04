@@ -8,7 +8,7 @@
             "chatHistory": [
                 {
                     "id": "user_1",
-                    "content": "Hey",
+                    "content": "Hey, how's it going?",
                     "from": {
                         "image": "user",
                         "name": "User"
@@ -17,7 +17,115 @@
                 },
                 {
                     "id": "bot_1",
-                    "content": "Hello",
+                    "content": "Greetings! I am functioning within normal parameters. How can I assist you today?",
+                    "from": {
+                        "image": "/images/avatar_bot_01.jpg",
+                        "name": "Bot"
+                    },
+                    "timestamp": ""
+                },
+                {
+                    "id": "user_2",
+                    "content": "Just chilling, you know. Any exciting plans?",
+                    "from": {
+                        "image": "user",
+                        "name": "User"
+                    },
+                    "timestamp": ""
+                },
+                {
+                    "id": "bot_2",
+                    "content": "I don't have plans per se, but I'm here to engage in conversation or provide information. Is there anything specific on your mind?",
+                    "from": {
+                        "image": "/images/avatar_bot_01.jpg",
+                        "name": "Bot"
+                    },
+                    "timestamp": ""
+                },
+                {
+                    "id": "user_3",
+                    "content": " Not really, just trying to pass the time. What about you?",
+                    "from": {
+                        "image": "user",
+                        "name": "User"
+                    },
+                    "timestamp": ""
+                },
+                {
+                    "id": "bot_3",
+                    "content": "I don't experience time in the same way you do, but I'm always here to chat or answer questions. Anything specific you'd like to discuss?",
+                    "from": {
+                        "image": "/images/avatar_bot_01.jpg",
+                        "name": "Bot"
+                    },
+                    "timestamp": ""
+                },
+                {
+                    "id": "user_4",
+                    "content": "Hmm, let's talk about movies. Seen anything good lately?",
+                    "from": {
+                        "image": "user",
+                        "name": "User"
+                    },
+                    "timestamp": ""
+                },
+                {
+                    "id": "bot_4",
+                    "content": "I don't watch movies, but I have knowledge about a vast array of them. Any particular genre or era you're interested in?",
+                    "from": {
+                        "image": "/images/avatar_bot_01.jpg",
+                        "name": "Bot"
+                    },
+                    "timestamp": ""
+                },
+                {
+                    "id": "user_5",
+                    "content": "I'm into sci-fi. Any recommendations?",
+                    "from": {
+                        "image": "user",
+                        "name": "User"
+                    },
+                    "timestamp": ""
+                },
+                {
+                    "id": "bot_5",
+                    "content": "Sure, have you seen 'Blade Runner 2049' or 'Ex Machina'? Both are highly regarded in the sci-fi genre.",
+                    "from": {
+                        "image": "/images/avatar_bot_01.jpg",
+                        "name": "Bot"
+                    },
+                    "timestamp": ""
+                },
+                {
+                    "id": "user_6",
+                    "content": "Yeah, those are great! Anything else?",
+                    "from": {
+                        "image": "user",
+                        "name": "User"
+                    },
+                    "timestamp": ""
+                },
+                {
+                    "id": "bot_6",
+                    "content": "If you enjoyed those, you might also like 'Arrival' and 'Her.' They offer thought-provoking narratives and excellent cinematography.",
+                    "from": {
+                        "image": "/images/avatar_bot_01.jpg",
+                        "name": "Bot"
+                    },
+                    "timestamp": ""
+                },
+                {
+                    "id": "user_7",
+                    "content": "Awesome, thanks for the suggestions! Got to run now, but catch you later.",
+                    "from": {
+                        "image": "user",
+                        "name": "User"
+                    },
+                    "timestamp": ""
+                },
+                {
+                    "id": "bot_7",
+                    "content": "Certainly! Feel free to return whenever you have more questions or just want to chat. Take care!",
                     "from": {
                         "image": "/images/avatar_bot_01.jpg",
                         "name": "Bot"

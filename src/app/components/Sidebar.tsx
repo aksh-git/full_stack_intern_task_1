@@ -11,7 +11,8 @@ interface bot {
     id: string
     title: string
     description: string
-    avatar: string
+    avatar: string,
+    chatHistory: any[]
 }
 
 type sidebarProps = {
@@ -55,7 +56,7 @@ function Sidebar({ bots, chatImageOption, activeChat, toggleChatImageOption, lau
                                 id={bot.id}
                                 image={bot.avatar}
                                 title={bot.title}
-                                description={bot.description}
+                                description={bot?.chatHistory ? bot.chatHistory[bot.chatHistory.length - 1].content :"Lorem ipsum, dolor sit amet consectetur adipisicing elit."}
                                 action={launchBot}
                                 isActive={activeChat === bot.id}
                                 style={``} />

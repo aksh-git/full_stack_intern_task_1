@@ -1,12 +1,11 @@
 "use client";
 
-import Image from 'next/image'
-import React, { useRef, useState, useEffect } from 'react'
+import Image from 'next/image';
+import React, { useState } from 'react';
 import { IoArrowBackCircle } from "react-icons/io5";
 import { RiDeleteBinFill } from "react-icons/ri";
 import { GrSend } from "react-icons/gr";
 import botsData from '@/assets/bots.json';
-import { RiUser6Fill } from "react-icons/ri";
 import MessageList from './list/MessageList';
 
 export type Message = {
@@ -80,10 +79,10 @@ function ChatArea({ chat_id, messageStore, deleteMessages, sendMessage }: chatPr
                     </div>
                 </div>
 
-                <div className='absolute bottom-6 w-full h-full pt-14'>
+                <div className='absolute bottom-6 w-full h-full pt-16'>
                     <div className='w-full h-full flex flex-col gap-4'>
 
-                        <div className='w-full h-full overflow-scroll p-'>
+                        <div className='w-full h-full overflow-scroll'>
                             <ul className='w-full space-y-2'>
                                 <MessageList messages={messageStore} />
                             </ul>

@@ -9,13 +9,13 @@ import { Message } from './components/list/MessageList';
 
 export default function Home() {
 
-  
+
   const [chatImageOption, setchatImages] = useState(false)
   const [bots, setbots] = useState(botsData['bots'])
   const [activeChat, setactiveChat] = useState<any>()
   const [messageStore, setMessageStore] = useState<any>([])
 
-  
+
   const toggleChatImageOption = () => {
     setchatImages(!chatImageOption)
   }
@@ -39,7 +39,7 @@ export default function Home() {
     setMessageStore([])
   }
 
-  const sendMessage = (message : string) => {
+  const sendMessage = (message: string) => {
     const msg: Message = {
       id: "",
       content: message,
@@ -67,7 +67,8 @@ export default function Home() {
             launchBot={launchBot}
             toggleChatImageOption={toggleChatImageOption} />
         </div>
-        <div className="h-full w-full">
+
+        <div className="h-full w-full"> {/* Chat Area */}
           {!activeChat && <PHChatArea />}
           {activeChat && <ChatArea
             chat_id={activeChat}
@@ -75,6 +76,12 @@ export default function Home() {
             deleteMessages={deleteMessages}
             sendMessage={sendMessage}
           />}
+        </div>
+      </div>
+
+      <div className='w-full'> {/* Footer */}
+        <div className='w-full'>
+
         </div>
       </div>
     </div>
