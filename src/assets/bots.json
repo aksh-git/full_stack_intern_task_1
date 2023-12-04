@@ -4,13 +4,53 @@
             "id": "bot_01",
             "title": "Caressa Jasline",
             "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum non labore, cumque nostrum, distinctio iure dolor molestiae id expedita omnis vero molestias ipsum sunt voluptates asperiores, in accusamus vel fugiat?",
-            "avatar": "/images/avatar_bot_01.jpg"
+            "avatar": "/images/avatar_bot_01.jpg",
+            "chatHistory": [
+                {
+                    "id": "user_1",
+                    "content": "Hey",
+                    "from": {
+                        "image": "user",
+                        "name": "User"
+                    },
+                    "timestamp": ""
+                },
+                {
+                    "id": "bot_1",
+                    "content": "Hello",
+                    "from": {
+                        "image": "/images/avatar_bot_01.jpg",
+                        "name": "Bot"
+                    },
+                    "timestamp": ""
+                }
+            ]
         },
         {
             "id": "bot_02",
             "title": "Johnni Gonzalez",
             "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum non labore, cumque nostrum, distinctio iure dolor molestiae id expedita omnis vero molestias ipsum sunt voluptates asperiores, in accusamus vel fugiat?",
-            "avatar": "/images/avatar_bot_02.jpg"
+            "avatar": "/images/avatar_bot_02.jpg",
+            "chatHistory": [
+                {
+                    "id": "user_1",
+                    "content": "Hey",
+                    "from": {
+                        "image": "user",
+                        "name": "User"
+                    },
+                    "timestamp": ""
+                },
+                {
+                    "id": "bot_1",
+                    "content": "Hello 2",
+                    "from": {
+                        "image": "/images/avatar_bot_02.jpg",
+                        "name": "Bot"
+                    },
+                    "timestamp": ""
+                }
+            ]
         }
     ]
 }
