@@ -37,12 +37,12 @@ function MessageList({ messages }: Props) {
             <ul className='w-full space-y-6'>
                 {messages?.map((message: Message) => {
                     return <li key={message?.id} className='w-full'>
-                        <div className={`w-full justify-end flex ${message.from.image === "user" ? "" : "flex-row-reverse"} items-end gap-2 lg:gap-4`}>
-                            <div className={`${message.from.image === "user" ? "rounded-t-lg rounded-l-lg bg-accent text-black" : "rounded-t-lg rounded-r-lg bg-secondary text-white/90"}  w-fit max-w-lg py-2 px-3 text-sm font-medium`}>
+                        <div className={`w-full justify-end flex ${message.from.image === "user" ? "" : "flex-row-reverse"} items-end gap-2 lg:gap-3`}>
+                            <div className={`${message.from.image === "user" ? "rounded-t-xl rounded-l-xl bg-accent text-black" : "rounded-t-xl rounded-r-xl bg-secondary text-white/90"}  w-fit max-w-lg py-2 px-3 text-sm font-medium`}>
                                 {message.content}
                             </div>
                             <div className='w-8 flex justify-center items-center'>
-                                <div className='text-2xl bg-secondary rounded-full'>
+                                <div className='text-xl bg-secondary rounded-full'>
                                     {message.from.image === "user" ? (
                                         <div className='p-2'>
                                             <RiUser6Fill />

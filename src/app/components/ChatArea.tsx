@@ -88,14 +88,14 @@ function ChatArea({ chat_id, messageStore, deleteMessages, sendMessage }: chatPr
                             </ul>
                         </div>
 
-                        <div className='w-full h-10 px-6'>
-                            <form className='w-full flex items-center gap-4' autoComplete='off' onSubmit={messageSend}>
+                        <div className='w-full h-10 px-4 lg:px-6'>
+                            <form className='w-full flex items-center gap-2 lg:gap-4' autoComplete='off' onSubmit={messageSend}>
                                 <div className='w-full'>
                                     <input className='w-full text-sm font-medium py-3 px-5 rounded-full text-white/90 bg-secondary outline-none' type="text" name="message" id="message" placeholder='Message...' title='Type your message here' value={message} onChange={onMessageChange} required />
                                 </div>
 
                                 <div className=''>
-                                    <button className='flex justify-center items-center bg-accent text-black text-xl p-3 rounded-full cursor-pointer' title='send' type='submit'>
+                                    <button className='flex justify-center items-center bg-accent text-black text-xl p-3 rounded-full cursor-pointer disabled:bg-accent/50' title='send' type='submit' disabled={message.length<=0}>
                                         <GrSend />
                                     </button>
                                 </div>

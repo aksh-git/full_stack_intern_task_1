@@ -4,8 +4,9 @@ import React, { useEffect, useState } from 'react';
 import Sidebar from "@/app/components/Sidebar";
 import ChatArea from "@/app/components/ChatArea";
 import PHChatArea from '@/app/components/placeHolders/PHChatArea';
+import { Message } from '@/app/components/list/MessageList';
+import Footer from '@/app/components/Footer';
 import botsData from '@/assets/bots.json';
-import { Message } from './components/list/MessageList';
 
 export default function Home() {
 
@@ -14,7 +15,6 @@ export default function Home() {
   const [bots, setbots] = useState(botsData['bots'])
   const [activeChat, setactiveChat] = useState<any>()
   const [messageStore, setMessageStore] = useState<any>([])
-
 
   const toggleChatImageOption = () => {
     setchatImages(!chatImageOption)
@@ -80,9 +80,7 @@ export default function Home() {
       </div>
 
       <div className='w-full'> {/* Footer */}
-        <div className='w-full'>
-
-        </div>
+       <Footer />
       </div>
     </div>
   )
