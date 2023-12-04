@@ -18,7 +18,7 @@ function Footer() {
                     </Link>
 
                     <div className='flex gap-4 items-center'>
-                        <Link className='hover:text-white' href='https:/github.com/aksh-git'>
+                        <Link className='hover:text-white' href='https://github.com/aksh-git'>
                             <div className='text-4xl md:text-2xl'>
                                 <FaGithub />
                             </div>

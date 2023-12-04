@@ -151,7 +151,7 @@
                 },
                 {
                     "id": "bot_1",
-                    "content": "Hello There, how may i help You",
+                    "content": "Hello There, how may i help you",
                     "from": {
                         "image": "/images/avatar_bot_02.jpg",
                         "name": "Bot"

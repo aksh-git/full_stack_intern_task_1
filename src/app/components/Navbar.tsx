@@ -6,15 +6,17 @@ import { BiSolidMagicWand } from "react-icons/bi";
 import { GiFairyWand } from "react-icons/gi";
 import { CgMenu, CgClose } from "react-icons/cg";
 import NavItem from './list/NavItem';
+import Link from 'next/link';
 
 function Navbar() {
 
     const [mobileNavBar, setmobileNavBar] = useState(false)
     const [activeNav, setactiveNav] = useState('explore')
 
+    
     return (
         <nav className='w-full sticky top-0 z-50'>
-        
+
             <div className='w-full'> {/* Wrapper */}
                 <div className='bg-background/10 backdrop-blur-sm w-full flex justify-between items-center'> {/* Desktop Navbar */}
                     {/* LEFT Part */}
@@ -36,15 +38,21 @@ function Navbar() {
                         {/* Menu Items */}
                         <div className={'hidden lg:flex w-full'}>
                             <ul className='list-none flex items-center gap-10 font-medium w-full'>
-                                <NavItem isActive={activeNav === "explore"} label={"Explore"}>
-                                    <FaHome />
-                                </NavItem>
-                                <NavItem isActive={activeNav === "create"} label={"Create"}>
-                                    <BiSolidMagicWand />
-                                </NavItem>
-                                <NavItem isActive={activeNav === "edit"} label={"Edit"}>
-                                    <GiFairyWand />
-                                </NavItem>
+                                <Link href='/'>
+                                    <NavItem isActive={activeNav === "explore"} label={"Explore"}>
+                                        <FaHome />
+                                    </NavItem>
+                                </Link>
+                                <Link href='/craete'>
+                                    <NavItem isActive={activeNav === "create"} label={"Create"}>
+                                        <BiSolidMagicWand />
+                                    </NavItem>
+                                </Link>
+                                <Link href='/edit'>
+                                    <NavItem isActive={activeNav === "edit"} label={"Edit"}>
+                                        <GiFairyWand />
+                                    </NavItem>
+                                </Link>
                             </ul>
                         </div>
 
@@ -53,9 +61,11 @@ function Navbar() {
                     {/* RIGHT Part */}
                     <div className='h-fit'>
                         {/* Login Button */}
-                        <div className='py-1 mr-2 lg:mr-0 lg:py-2 px-10 lg:px-14 rounded-full bg-accent cursor-pointer'>
-                            <span className='text-background font-semibold text-base'>Login</span>
-                        </div>
+                        <Link href='/login'>
+                            <div className='py-1 mr-2 lg:mr-0 lg:py-2 px-10 lg:px-14 rounded-full bg-accent cursor-pointer'>
+                                <span className='text-background font-semibold text-base'>Login</span>
+                            </div>
+                        </Link>
                     </div>
 
                 </div>
@@ -64,15 +74,21 @@ function Navbar() {
                 <div className='w-full relative bg-background'>
                     <div className={`${mobileNavBar ? '' : 'hidden'} lg:hidden w-full  border-b border-primary py-4`}>
                         <ul className='list-none flex flex-col lg:flex-row items-center gap-4 lg:gap-10 font-medium w-full'>
-                            <NavItem isActive={activeNav === "explore"} label={"Explore"}>
-                                <FaHome />
-                            </NavItem>
-                            <NavItem isActive={activeNav === "create"} label={"Create"}>
-                                <BiSolidMagicWand />
-                            </NavItem>
-                            <NavItem isActive={activeNav === "edit"} label={"Edit"}>
-                                <GiFairyWand />
-                            </NavItem>
+                            <Link className='w-full' href='/'>
+                                <NavItem isActive={activeNav === "explore"} label={"Explore"}>
+                                    <FaHome />
+                                </NavItem>
+                            </Link>
+                            <Link className='w-full' href='/craete'>
+                                <NavItem isActive={activeNav === "create"} label={"Create"}>
+                                    <BiSolidMagicWand />
+                                </NavItem>
+                            </Link>
+                            <Link className='w-full' href='/edit'>
+                                <NavItem isActive={activeNav === "edit"} label={"Edit"}>
+                                    <GiFairyWand />
+                                </NavItem>
+                            </Link>
                         </ul>
                     </div>
                 </div>
