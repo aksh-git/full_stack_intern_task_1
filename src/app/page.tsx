@@ -25,7 +25,7 @@ export default function Home() {
   }
 
   const AddNewBot = () => {
-    //
+    //TODO
   }
 
   useEffect(() => {
@@ -40,6 +40,7 @@ export default function Home() {
   }
 
   const sendMessage = (message: string) => {
+    // Adding temp behaviour
     const msg: Message = {
       id: "",
       content: message,
@@ -54,10 +55,10 @@ export default function Home() {
 
   return (
     <div className="py-4 w-full h-[90vh]">
-
       {/* Wrapper */}
       <div className="w-full h-full flex gap-2 md:gap-4">
         <div className="h-full w-fit md:w-full md:max-w-xs">
+
           {/* Holds all the chats */}
           <Sidebar
             bots={bots}
@@ -69,7 +70,9 @@ export default function Home() {
         </div>
 
         <div className="h-full w-full"> {/* Chat Area */}
-          {!activeChat && <PHChatArea />}
+
+          {!activeChat && <PHChatArea />} {/* this displays only when user did not opend any chats yet. */}
+
           {activeChat && <ChatArea
             chat_id={activeChat}
             messageStore={messageStore}
@@ -80,7 +83,7 @@ export default function Home() {
       </div>
 
       <div className='w-full'> {/* Footer */}
-       <Footer />
+        <Footer />
       </div>
     </div>
   )
