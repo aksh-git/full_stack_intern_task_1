@@ -83,7 +83,7 @@ function ChatArea({ chat_id, messageStore, deleteMessages, sendMessage, goBack }
                 <div className='absolute bottom-6 w-full h-full pt-16'>
                     <div className='w-full h-full flex flex-col gap-4'>
 
-                        <div className='w-full h-full overflow-scroll'>
+                        <div className='w-full h-full overflow-y-auto no-scrollbar'>
                             <ul className='w-full space-y-2'>
                                 <MessageList messages={messageStore} />
                             </ul>
